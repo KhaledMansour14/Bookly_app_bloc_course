@@ -10,7 +10,6 @@ abstract class Styles {
   static const textStyle20 = TextStyle(
     fontSize: 20,
     fontWeight: FontWeight.w900,
-    fontFamily: kCormorantGaramond,
   );
   static const textStyle18 = TextStyle(
     fontSize: 18,
@@ -22,6 +21,7 @@ abstract class Styles {
   );
   static const textStyle14 = TextStyle(
     fontSize: 14,
-    fontWeight: FontWeight.normal,
+    fontWeight: FontWeight.w700,
+    fontFamily: kMontserrat,
   );
 }

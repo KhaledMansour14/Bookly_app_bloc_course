@@ -1,5 +1,7 @@
+import 'package:bookly_app/constants.dart';
 import 'package:bookly_app/core/utils/assets.dart';
 import 'package:bookly_app/core/utils/styles.dart';
+import 'package:bookly_app/features/home/presentation/views/widgets/best_seller_list_view.dart';
 import 'package:bookly_app/features/home/presentation/views/widgets/custom_app_bar.dart';
 import 'package:bookly_app/features/home/presentation/views/widgets/featured_list%20_view.dart';
 import 'package:flutter/material.dart';
@@ -51,21 +53,7 @@ class BestSellerItem extends StatelessWidget {
           ),
         ),
         SizedBox(width: 30),
-        Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            SizedBox(
-              width: MediaQuery.of(context).size.width * 0.5,
-              child: const Text(
-                'Harry Potter and the Goblet of Fire',
-                style: Styles.textStyle20,
-                maxLines: 2,
-                overflow: TextOverflow.ellipsis,
-                textAlign: TextAlign.start,
-              ),
-            ),
-          ],
-        )
+        BestSellerListViewItem(),
       ],
     );
   }
