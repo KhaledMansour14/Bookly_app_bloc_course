@@ -29,32 +29,3 @@ class HomeViewBody extends StatelessWidget {
     );
   }
 }
-
-class BestSellerItem extends StatelessWidget {
-  const BestSellerItem({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        SizedBox(
-          height: 120,
-          child: AspectRatio(
-            aspectRatio: 2.8 / 4,
-            child: Container(
-              decoration: BoxDecoration(
-                color: Colors.red,
-                borderRadius: BorderRadius.circular(8),
-                image: const DecorationImage(
-                    image: AssetImage(AssetsData.testImage), fit: BoxFit.fill),
-              ),
-            ),
-          ),
-        ),
-        SizedBox(width: 30),
-        BestSellerListViewItem(),
-      ],
-    );
-  }
-}
