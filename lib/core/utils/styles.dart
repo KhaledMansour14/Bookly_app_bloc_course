@@ -20,6 +20,7 @@ abstract class Styles {
     fontWeight: FontWeight.w800,
   );
   static const textStyle14 = TextStyle(
-    fontSize: 14, fontWeight: FontWeight.w500,
+    fontSize: 14,
+    fontWeight: FontWeight.w500,
   );
 }
