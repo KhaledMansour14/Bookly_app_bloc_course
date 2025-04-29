@@ -12,7 +12,7 @@ class BookDetailsSection extends StatelessWidget {
       children: [
         SizedBox(
           height: MediaQuery.of(context).size.width * 0.6,
-          child: const CustomBookImage(),
+          // child: const CustomBookImage(),
         ),
         SizedBox(height: 43),
         Text('The Jungle Book', style: Styles.textStyle30),
