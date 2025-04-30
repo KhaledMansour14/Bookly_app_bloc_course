@@ -32,15 +32,14 @@ class HomeRepoImpl implements HomeRepo {
   Future<Either<Failure, List<BookModel>>> fetchFeaturedBooks() async {
     try {
       var data = await apiService.get(
-          urlEndPoint:
-              'volumes?q=subject:programming&Filtering=free-ebooks');
-
+          urlEndPoint: 'volumes?q=subject:programming&Filtering=free-ebooks');
       List<BookModel> books = [];
       for (var item in data['items']) {
         books.add(BookModel.fromJson(item));
       }
       return right(books);
     } catch (e) {
+      left(ServerFailure(e.toString()));
       if (e is DioException) {
         return left(ServerFailure.fromDioError(e));
       }
