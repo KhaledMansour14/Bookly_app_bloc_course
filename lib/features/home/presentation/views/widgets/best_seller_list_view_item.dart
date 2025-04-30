@@ -25,7 +25,7 @@ class BestSellerListViewItem extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             CustomBookImage(
-                imageUrl: book.volumeInfo.imageLinks.smallThumbnail),
+                imageUrl: book.volumeInfo.imageLinks?.smallThumbnail ?? elEaseen),
             SizedBox(width: 30),
             Expanded(
               child: Column(
