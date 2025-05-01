@@ -10,9 +10,10 @@ class CustomSearchTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextField(
       onSubmitted: (value) {
-        BlocProvider.of<SearchCubitCubit>(context)
-            .homeRepo
-            .fetchSearchBooks(text: value);
+        if (value.isNotEmpty) {
+          BlocProvider.of<SearchCubitCubit>(context)
+              .fetchSearchBooks(text: value);
+        }
       },
       decoration: InputDecoration(
         enabledBorder: buildOutlineInputBorder(),
